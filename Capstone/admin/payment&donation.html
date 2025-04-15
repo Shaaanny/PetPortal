@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paw Portal - Payments & Donations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="logo.png" alt="logo">
+                </span>
+
+                <div class="text header-text">
+                    <span class="name">Pet Portal</span>
+                    <span class="Admin"></span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box"> 
+                    <i class='bx bx-search-alt-2 icon' ></i>
+                        <input type="text" placeholder="Search...">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link"> 
+                        <a href="admin.html">
+                            <i class="fa-solid fa-house icon"></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link"> 
+                        <a href="user_manage.html">
+                            <i class="fa-solid fa-users icon"></i>
+                            <span class="text nav-text">User Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-link"> 
+                        <a href="pet_manage.html">
+                            <i class='bx bx-list-ul icon' ></i>
+                            <span class="text nav-text">Pet List Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-link"> 
+                        <a href="adoption.html">
+                            <i class="fa-solid fa-spinner icon"></i>
+                            <span class="text nav-text">Adoption Process Monitoring</span>
+                        </a>
+                    </li>
+                    <li class="nav-link"> 
+                        <a href="system_report.html">
+                            <i class='bx bxs-report icon' ></i>
+                            <span class="text nav-text">System Report & Analytics</span>
+                        </a>
+                    </li>
+                    <li class="nav-link"> 
+                        <a href="payment&donation.html">
+                            <i class="fa-solid fa-credit-card icon"></i>
+                            <span class="text nav-text">Payment & Donation Management</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class=""> 
+                    <a href="">
+                        <i class="bx bx-log-out icon"></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+                
+                <li class="mode"> 
+                    <div class="moon-sun">
+                        <i class="fas fa-moon icon moon"></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark Mode</span>
+                    
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="home">
+        <div class="text">Dashboard</div>
+    </section>
+    
+    <section class="home">
+        <div class="text">Payment & Donation Management</div>
+        <div class="management-container">
+            <div class="payment-tabs">
+                <button class="tab-btn active">All Transactions</button>
+                <button class="tab-btn">Adoption Fees</button>
+                <button class="tab-btn">Donations</button>
+                <button class="tab-btn">Refunds</button>
+            </div>
+            
+            <div class="payment-filters">
+                <input type="date" placeholder="From Date">
+                <input type="date" placeholder="To Date">
+                <select>
+                    <option>All Status</option>
+                    <option>Completed</option>
+                    <option>Pending</option>
+                    <option>Failed</option>
+                </select>
+                <button class="filter-btn">Apply Filters</button>
+            </div>
+            
+            <table class="payment-table">
+                <thead>
+                    <tr>
+                        <th>Transaction ID</th>
+                        <th>Date</th>
+                        <th>User</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TXN-2023-1001</td>
+                        <td>2023-05-15</td>
+                        <td>John Doe</td>
+                        <td>Adoption Fee</td>
+                        <td>$150.00</td>
+                        <td><span class="status completed">Completed</span></td>
+                        <td>
+                            <button class="view-btn">View Details</button>
+                            <button class="receipt-btn">Receipt</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TXN-2023-1002</td>
+                        <td>2023-05-14</td>
+                        <td>Sarah Smith</td>
+                        <td>Donation</td>
+                        <td>$50.00</td>
+                        <td><span class="status completed">Completed</span></td>
+                        <td>
+                            <button class="view-btn">View Details</button>
+                            <button class="receipt-btn">Receipt</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="payment-summary">
+                <div class="summary-card">
+                    <h3>Total Revenue</h3>
+                    <p class="amount">$2,450.00</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Adoption Fees</h3>
+                    <p class="amount">$1,800.00</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Donations</h3>
+                    <p class="amount">$650.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>

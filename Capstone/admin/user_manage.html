@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paw Portal - User Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="logo.png" alt="logo">
+                    </span>
+    
+                    <div class="text header-text">
+                        <span class="name">Pet Portal</span>
+                        <span class="Admin"></span>
+                    </div>
+                </div>
+    
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+            <div class="menu-bar">
+                <div class="menu">
+                    <li class="search-box"> 
+                        <i class='bx bx-search-alt-2 icon' ></i>
+                            <input type="text" placeholder="Search...">
+                    </li>
+                    <ul class="menu-links">
+                        <li class="nav-link"> 
+                            <a href="admin.html">
+                                <i class="fa-solid fa-house icon"></i>
+                                <span class="text nav-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-link"> 
+                            <a href="user_manage.html">
+                                <i class="fa-solid fa-users icon"></i>
+                                <span class="text nav-text">User Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link"> 
+                            <a href="pet_manage.html">
+                                <i class='bx bx-list-ul icon' ></i>
+                                <span class="text nav-text">Pet List Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link"> 
+                            <a href="adoption.html">
+                                <i class="fa-solid fa-spinner icon"></i>
+                                <span class="text nav-text">Adoption Process Monitoring</span>
+                            </a>
+                        </li>
+                        <li class="nav-link"> 
+                            <a href="system_report.html">
+                                <i class='bx bxs-report icon' ></i>
+                                <span class="text nav-text">System Report & Analytics</span>
+                            </a>
+                        </li>
+                        <li class="nav-link"> 
+                            <a href="payment&donation.html">
+                                <i class="fa-solid fa-credit-card icon"></i>
+                                <span class="text nav-text">Payment & Donation Management</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class=""> 
+                        <a href="">
+                            <i class="bx bx-log-out icon"></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li>
+                    
+                    <li class="mode"> 
+                        <div class="moon-sun">
+                            <i class="fas fa-moon icon moon"></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark Mode</span>
+                        
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </nav>
+        
+        <section class="home">
+            <div class="text">Dashboard</div>
+        </section>
+    </nav>
+    
+    <section class="home">
+        <div class="text">User Management</div>
+        <div class="management-container">
+            <div class="search-filter">
+                <input type="text" placeholder="Search users..." class="search-input">
+                <select class="filter-select">
+                    <option>All Users</option>
+                    <option>Adopters</option>
+                    <option>Shelters</option>
+                    <option>Admins</option>
+                </select>
+                <button class="add-user-btn">Add New User</button>
+            </div>
+            
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1001</td>
+                        <td>John Doe</td>
+                        <td>john@example.com</td>
+                        <td>Adopter</td>
+                        <td><span class="status active">Active</span></td>
+                        <td>
+                            <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                            <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1002</td>
+                        <td>Happy Paws Shelter</td>
+                        <td>contact@happypaws.com</td>
+                        <td>Shelter</td>
+                        <td><span class="status pending">Pending</span></td>
+                        <td>
+                            <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                            <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="pagination">
+                <button class="page-btn">Previous</button>
+                <span class="page-number">1</span>
+                <button class="page-btn">Next</button>
+            </div>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>

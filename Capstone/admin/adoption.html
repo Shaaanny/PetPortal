@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paw Portal - Adoption Process</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="logo.png" alt="logo">
+                </span>
+
+                <div class="text header-text">
+                    <span class="name">Pet Portal</span>
+                    <span class="Admin"></span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box"> 
+                    <i class='bx bx-search-alt-2 icon' ></i>
+                        <input type="text" placeholder="Search...">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link"> 
+                        <a href="admin.html">
+                            <i class="fa-solid fa-house icon"></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link"> 
+                        <a href="user_manage.html">
+                            <i class="fa-solid fa-users icon"></i>
+                            <span class="text nav-text">User Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-link"> 
+                        <a href="pet_manage.html">
+                            <i class='bx bx-list-ul icon' ></i>
+                            <span class="text nav-text">Pet List Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-link"> 
+                        <a href="adoption.html">
+                            <i class="fa-solid fa-spinner icon"></i>
+                            <span class="text nav-text">Adoption Process Monitoring</span>
+                        </a>
+                    </li>
+                    <li class="nav-link"> 
+                        <a href="system_report.html">
+                            <i class='bx bxs-report icon' ></i>
+                            <span class="text nav-text">System Report & Analytics</span>
+                        </a>
+                    </li>
+                    <li class="nav-link"> 
+                        <a href="payment&donation.html">
+                            <i class="fa-solid fa-credit-card icon"></i>
+                            <span class="text nav-text">Payment & Donation Management</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class=""> 
+                    <a href="">
+                        <i class="bx bx-log-out icon"></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+                
+                <li class="mode"> 
+                    <div class="moon-sun">
+                        <i class="fas fa-moon icon moon"></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark Mode</span>
+                    
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="home">
+        <div class="text">Dashboard</div>
+    </section>
+    
+    <section class="home">
+        <div class="text">Adoption Process Monitoring</div>
+        <div class="management-container">
+            <div class="process-tabs">
+                <button class="tab-btn active">All Applications</button>
+                <button class="tab-btn">Pending Review</button>
+                <button class="tab-btn">Home Checks</button>
+                <button class="tab-btn">Approved</button>
+                <button class="tab-btn">Rejected</button>
+            </div>
+            
+            <div class="process-list">
+                <div class="process-item">
+                    <div class="process-header">
+                        <span class="process-id">APP-2023-1001</span>
+                        <span class="process-status pending">Pending Review</span>
+                    </div>
+                    <div class="process-details">
+                        <div class="applicant">
+                            <h4>Applicant: John Doe</h4>
+                            <p>Applied for: Buddy (Golden Retriever)</p>
+                        </div>
+                        <div class="timeline">
+                            <p>Application Date: 2023-05-15</p>
+                            <p>Last Updated: 2023-05-16</p>
+                        </div>
+                        <div class="process-actions">
+                            <button class="action-btn review">Review</button>
+                            <button class="action-btn message"><i class="fas fa-envelope"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="process-item">
+                    <div class="process-header">
+                        <span class="process-id">APP-2023-1002</span>
+                        <span class="process-status home-check">Home Check Scheduled</span>
+                    </div>
+                    <div class="process-details">
+                        <div class="applicant">
+                            <h4>Applicant: Sarah Smith</h4>
+                            <p>Applied for: Whiskers (Persian Cat)</p>
+                        </div>
+                        <div class="timeline">
+                            <p>Application Date: 2023-05-10</p>
+                            <p>Home Check Date: 2023-05-20</p>
+                        </div>
+                        <div class="process-actions">
+                            <button class="action-btn schedule">Reschedule</button>
+                            <button class="action-btn approve">Approve</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>

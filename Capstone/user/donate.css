@@ -1,0 +1,181 @@
+/* General body styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 80px; /* Offsets navbar height */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo-container {
+    margin-left: 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /* Centers the navbar */
+    flex-grow: 1;
+    justify-content: center; /* Ensures links are centered */
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.logo-container {
+    margin-left: 0px; /* Spacing on the right of logo */
+}
+
+.logo {
+    height: 60px; /* Set preferred height for the logo */
+    width: auto; /* Auto width to maintain aspect ratio */
+    object-fit: contain; 
+    mix-blend-mode: darken; /*Blend the bg color in navbar */
+}
+
+/* --------------------------*/
+
+.donation-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 350px;
+    margin-top: 100px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus, button:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
+.payment-options {
+    display: flex;
+    gap: 10px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
+/*---------------------------*/
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; /* Stick to bottom */
+    width: 100%;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+.footer-section h3 {
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: #ffcc00;
+}
+.footer-section p,.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+}
+.footer-section a:hover {
+    color: #ffcc00;
+}
+.social-media {
+    list-style: none;
+    padding: 0;
+}
+.social-media li {
+    margin: 5px 0;
+}
+.social-media a {
+    text-decoration: none;
+    color: #ffcc00;
+    font-size: 16px;
+}
+.social-media a:hover {
+    text-decoration: underline;
+}
+

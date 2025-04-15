@@ -1,0 +1,125 @@
+<div class="search-bar">
+    <div class="dropdown">
+        <button class="dropbtn">
+            <i class="fas fa-paw"></i> Select Pet <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#" data-value="all" onclick="filterPets('all')"><i class="fas fa-paw"></i> All</a>
+            <a href="#" data-value="dogs" onclick="filterPets('dogs')"><i class="fas fa-dog"></i> Dogs</a>
+            <a href="#" data-value="cats" onclick="filterPets('cats')"><i class="fas fa-cat"></i> Cats</a>
+        </div>
+    </div>
+    <input type="text" id="searchInput" placeholder="Search for a pet...">
+    <button class="search-btn" onclick="searchPets()">
+        <i class="fas fa-search"></i> Search</button>
+</div>
+<br>
+
+<section id="dogs-section" class="pet-section">
+    <h3 class="text-pet">Dogs</h3>
+    <div class="pets">
+        <div class="dog">
+            <img src="Husky.jpg" alt="Husky">
+            <h4>Huskies</h4>
+            <p>2 years old</p>
+            <p>Camarin, Caloocan City</p>
+            <div class="buttons">
+                <button class="heart-button" onclick="toggleHeart(this)"><i class="far fa-heart"></i></button>
+                <button class="Info-button" onclick="openModal('Husky', 'Camarin, Caloocan City', 'Friendly, Energetic', 'Vaccinated', 'Husky.jpg')"><i class="fas fa-paw"></i>Info</button>
+            </div>
+        </div>
+        <div class="dog">
+            <img src="Golden.jpg" alt="Golden Retriever">
+            <h4>Golden Retriever</h4>
+            <p>4 years old</p>
+            <p>North Fairview, Quezon City</p>
+            <div class="buttons">
+                <button class="heart-button" onclick="toggleHeart(this)"><i class="far fa-heart"></i></button>
+                <button class="Info-button" onclick="openModal('Golden Retriever', 'North Fairview, Quezon City', 'Friendly, Loyal', 'Vaccinated', 'Golden.jpg')"><i class="fas fa-paw"></i>Info</button>
+            </div>
+        </div>
+        <div class="dog">
+            <img src="german.jpg" alt="German Shepherd">
+            <h4>German Shepherd</h4>
+            <p>2 years old</p>
+            <p>San Mateo, Rizal</p>
+            <div class="buttons">
+                <button class="heart-button" onclick="toggleHeart(this)"><i class="far fa-heart"></i></button>
+                <button class="Info-button" onclick="openModal('German Shepherd', 'San Mateo, Rizal', 'Intelligent, Protective', 'Vaccinated', 'german.jpg')"><i class="fas fa-paw"></i>Info</button>
+            </div>
+        </div>
+        <div class="dog">
+            <img src="bulldog.jpg" alt="Bull Dog">
+            <h4>Bull Dog</h4>
+            <p>5 years old</p>
+            <p>West Fairview, Quezon City</p>
+            <div class="buttons">
+                <button class="heart-button" onclick="toggleHeart(this)"><i class="far fa-heart"></i></button>
+                <button class="Info-button" onclick="openModal('Bull Dog', 'West Fairview, Quezon City', 'Calm, Courageous', 'Vaccinated', 'bulldog.jpg')"><i class="fas fa-paw"></i>Info</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="cats-section" class="pet-section" style="display: none;">
+    <h3 class="text-pet">Cats</h3>
+    <div class="pets">
+        <div class="cat">
+            <img src="Britist_Shorthair.jpg" alt="British Shorthair">
+            <h4>British Shorthair</h4>
+            <p>3 years old</p>
+            <p>Manila, Philippines</p>
+            <div class="buttons">
+                <button class="heart-button" onclick="toggleHeart(this)"><i class="far fa-heart"></i></button>
+                <button class="Info-button" onclick="openModal('British Shorthair', 'Manila, Philippines', 'Affectionate, Easygoing', 'Vaccinated', 'Britist_Shorthair.jpg')"><i class="fas fa-paw"></i> Info</button>
+            </div>
+        </div>
+        <div class="cat">
+            <img src="Himalayan.jpg" alt="Himalayan">
+            <h4>Himalayan</h4>
+            <p>2 years old</p>
+            <p>Quezon City, Philippines</p>
+            <div class="buttons">
+                <button class="heart-button" onclick="toggleHeart(this)"><i class="far fa-heart"></i></button>
+                <button class="Info-button" onclick="openModal('Himalayan', 'Quezon City, Philippines', 'Gentle, Quiet', 'Vaccinated', 'Himalayan.jpg')"><i class="fas fa-paw"></i> Info</button>
+            </div>
+        </div>
+        <div class="cat">
+            <img src="Persian.jpg" alt="Persian">
+            <h4>Persian</h4>
+            <p>4 years old</p>
+            <p>Pasig City, Philippines</p>
+            <div class="buttons">
+                <button class="heart-button" onclick="toggleHeart(this)"><i class="far fa-heart"></i></button>
+                <button class="Info-button" onclick="openModal('Persian', 'Pasig City, Philippines', 'Loving, Playful', 'Vaccinated', 'Persian.jpg')"><i class="fas fa-paw"></i> Info</button>
+            </div>
+        </div>
+        <div class="cat">
+            <img src="Siamese.jpg" alt="Siamese">
+            <h4>Siamese</h4>
+            <p>1 year old</p>
+            <p>Makati, Philippines</p>
+            <div class="buttons">
+                <button class="heart-button" onclick="toggleHeart(this)"><i class="far fa-heart"></i></button>
+                <button class="Info-button" onclick="openModal('Siamese', 'Makati, Philippines', 'Vocal, Social', 'Vaccinated', 'Siamese.jpg')"><i class="fas fa-paw"></i> Info</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <img id="petImage" src="" alt="Pet Image">
+        <div class="pet-info">
+            <p><strong>Name:</strong> <span id="petName"></span></p>
+            <p><strong>Location:</strong> <span id="petLocation"></span></p>
+            <p><strong>Traits:</strong> <span id="petTraits"></span></p>
+            <p><strong>Medical History:</strong> <span id="petMedical"></span></p>
+        </div>
+        <button class="adopt-btn">ADOPT</button>
+        <button class="closebtn" onclick="closeModal()"><i class="fas fa-close"></i> CLOSE</button>
+    </div>
+</div>

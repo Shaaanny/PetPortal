@@ -1,0 +1,193 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 80px; /* Offsets navbar height */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo-container {
+    margin-left: 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /* Centers the navbar */
+    flex-grow: 1;
+    justify-content: center; /* Ensures links are centered */
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.logo-container {
+    margin-left: 0px; /* Spacing on the right of logo */
+}
+
+.logo {
+    height: 60px; /* Set preferred height for the logo */
+    width: auto; /* Auto width to maintain aspect ratio */
+    object-fit: contain; 
+    mix-blend-mode: darken; /*Blend the bg color in navbar */
+}
+
+.container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px; /* Adjust as needed */
+    max-width: 90%; /* Ensures responsiveness */
+    position: relative; /* Avoids issues with navbar */
+    top: 100px; /* Pushes below navbar */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers contents */
+    text-align: center;
+    margin: 0 auto; /* Center the container */
+    margin-bottom: 50px; /* Add space below the container */
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.contact-info div {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    margin-right: 15px;
+    color: #555; /* Slightly darker icon color */
+}
+
+.form-area h2 {
+    margin-bottom: 20px;
+}
+
+form input, 
+form textarea {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+form textarea {
+    height: 120px;
+}
+
+form button {
+    background-color: #007bff; /* Blue button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+    position: relative; /* Ensure it stays at the bottom */
+    bottom: 0; /* Aligns footer to the bottom */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: #ffcc00;
+}
+
+.footer-section p, .footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+.social-media {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media li {
+    margin: 5px 0;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #ffcc00;
+    font-size: 16px;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
